@@ -24,9 +24,9 @@ const createDataLogs = async (req, res) => {
     let saveDataLogs, err;
     [err, savedDataLogs] = await to(DataLogs.create({
         deviceId: device.id,
-        temperature:req.body.temperature,
-        ElectronicConductivity:req.body.ElectronicConductivity,
-        GPSLocation:req.body.GPSLocation,
+        waterdepth:req.body.waterdepth,
+        raining:req.body.raining,
+        waterflow:req.body.waterflow,
         pH:req.body.pH,
 
     }));
